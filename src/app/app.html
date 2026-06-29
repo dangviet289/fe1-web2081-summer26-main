@@ -8,6 +8,7 @@
       <a href="#" class="hover:text-gray-200">Trang chủ</a>
       <a href="#" class="hover:text-gray-200">Danh sách</a>
       <a href="#" class="hover:text-gray-200">Thêm mới</a>
+      <a href="#" routerLink="/about" class="hover:text-gray-200">About</a>
     </div>
 
     <div class="hidden md:flex items-center space-x-6">
@@ -18,6 +19,12 @@
 </nav>
 
 <div class="max-w-6xl mx-auto mt-10 px-4 text-center">
-  <h1 class="text-4xl font-bold mb-4">Chào mừng đến với WEB2081</h1>
+  <h1 class="text-4xl font-bold mb-4">Xin chào Angular
+<br>Tôi đang học Angular Framework</h1>
+<p>{{title}}</p>
+<p>Tên: {{ name }}</p>
+<p>Tuổi: {{ age }}</p>
+<button (click)="handleClick()" class="bg-blue-600 text-white px-4">Click Me</button>
+<router-outlet></router-outlet>
   <router-outlet></router-outlet>
 </div>

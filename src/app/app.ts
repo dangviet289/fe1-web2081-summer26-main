@@ -1,12 +1,24 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, RouterLink],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
 export class App {
-  title = 'my-app';
+  title = 'my-app';//property
+  name = 'Bùi Đăng Việt';
+  age = 22;
+
+  //method
+  sayHello(){
+    
+    console.log("Hello from App Component");
+    
+  }
+  handleClick() {
+  alert("Bạn đã click button");
+}
 }
