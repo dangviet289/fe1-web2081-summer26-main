@@ -1,0 +1,34 @@
+<h2>Danh sách truyện tranh</h2>
+<table class="story-table">
+  <thead>
+    <tr>
+      <th>STT</th>
+      <th>Tiêu đề</th>
+      <th>Tác giả</th>
+      <th>Lượt xem</th>
+      <th>Năm phát hành</th>
+      <th>Thể loại</th>
+      <th>Hình ảnh</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (story of stories; track story.title; let i = $index) {
+    <tr>
+      <td>{{ i + 1 }}</td>
+      <td>{{ story.title }} 
+        @if (story.views > 80000) {<p>🔥 Truyện nổi bật</p>}
+      </td>
+      <td>{{ story.author }}</td>
+      <td>{{ story.views }}</td>
+      <td>{{ story.year }}</td>
+      <td>{{ story.genre }}</td>
+      <td><img src="{{ story.image }}" alt="{{ story.title }}" width="100"></td>
+    </tr>
+    @if (stories.length === 0) {
+      <tr>
+        <td colspan="7">Không có truyện nào được tìm thấy.</td>
+      </tr>
+    }
+  }
+  </tbody>
+</table>

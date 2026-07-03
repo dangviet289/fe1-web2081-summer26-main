@@ -1,0 +1,48 @@
+.story-card {
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  padding: 20px 0;
+}
+.story-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.story-table th, .story-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.story-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.story-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.story-img {
+  width: 60px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.story-title {
+  font-weight: bold;
+  color: #0056b3;
+}
+
+.no-data {
+  text-align: center !important;
+  color: #888;
+  font-style: italic;
+}

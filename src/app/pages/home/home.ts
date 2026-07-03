@@ -7,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './home.css',
 })
 export class Home {
+  // code logic
+  // property
+  name = "Home"
 
+  constructor() {}
+  
+  //method
+  deleteProduct(){}
 }
