@@ -1,0 +1,48 @@
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+@Component({
+  selector: 'app-add-story',
+  imports: [ReactiveFormsModule],
+  templateUrl: './add-story.html',
+  styleUrl: './add-story.css',
+})
+export class AddStory {
+  addForm: FormGroup;
+  constructor(private fb: FormBuilder) {
+    this.addForm = this.fb.group({
+      title: ["", [Validators.required, Validators.minLength(3)]],
+      author: "",
+      views: ["", [Validators.min(0)]],
+      name: ["", [Validators.required]],
+      price: ["", [Validators.min(1)]],
+      category:[""],
+      username: ["", [Validators.required]],
+      email: ["", [Validators.required]],
+      password: ["", [Validators.required, Validators.minLength(6)]]
+    })
+  }
+  submitForm(){
+    console.log(this.addForm.value)
+  }
+  get title(){
+    return this.addForm.get('title')
+  }
+  get views(){
+    return this.addForm.get('views')
+  }
+  get name(){
+    return this.addForm.get('name')
+  }
+  get price(){
+    return this.addForm.get('price')
+  }
+  get username(){
+    return this.addForm.get('username')
+  }
+  get email(){
+    return this.addForm.get('email')
+  }
+  get password(){
+    return this.addForm.get('password')
+  }
+}

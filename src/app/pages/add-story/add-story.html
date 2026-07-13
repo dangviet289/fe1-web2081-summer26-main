@@ -1,0 +1,87 @@
+<!-- <h2>Thêm truyện tranh</h2>
+
+<form [formGroup]="addForm" (ngSubmit)="submitForm()">
+  <div>
+    <label>Tên truyện</label>
+    <input type="text" formControlName="title" />
+    @if (title?.invalid && title?.touched){
+        <p style="color:red">Tên truyện phải ít nhất 3 kí tự</p>
+    }
+  </div>
+
+  <div>
+    <label>Tác giả</label>
+    <input type="text" formControlName="author" />
+  </div>
+
+  <div>
+    <label>Lượt xem</label>
+    <input type="number" formControlName="views" />
+    @if (views?.invalid && views?.touched){
+        <p style="color:red">Lượt xem phải là một số không âm</p>
+    }
+  </div>
+
+  <button type="submit" [disabled]="addForm.invalid">Thêm truyện</button>
+</form> -->
+
+<!-- Bài 1 -->
+<h2>Form thêm Product</h2>
+
+<form [formGroup]="addForm" (ngSubmit)="submitForm()">
+  <div>
+    <label>Tên sản phẩm</label>
+    <input type="text" formControlName="name" />
+    @if (name?.invalid && name?.touched){
+        <p style="color:red">Tên sản phẩm không được bỏ trống</p>
+    }
+  </div>
+
+  <div>
+    <label>Giá sản phẩm</label>
+    <input type="number" formControlName="price" />
+    @if (price?.invalid && price?.touched){
+        <p style="color:red">giá sản phẩm phải lớn hơn 0</p>
+    }
+  </div>
+
+  <div>
+    <label>Loại sản phẩm</label>
+    <input type="text" formControlName="category" />
+    
+  </div>
+
+  <button type="submit" >Thêm Product</button>
+</form>
+
+<!-- Bài 2 -->
+<h2>Form đăng ký tài khoản</h2>
+
+<form [formGroup]="addForm" (ngSubmit)="submitForm()">
+  <div>
+    <label>Tên Đăng Nhập</label>
+    <input type="text" formControlName="username" />
+    @if (username?.invalid && username?.touched){
+        <p style="color:red">Không được bỏ trống tên</p>
+    }
+  </div>
+
+  <div>
+    <label>Email</label>
+    <input type="text" formControlName="email" />
+    @if (email?.invalid && email?.touched){
+        <p style="color:red">Không được bỏ trống Email</p>
+    }
+  </div>
+
+  <div>
+    <label>PassWord</label>
+    <input type="password" formControlName="password" />
+    @if (password?.invalid && password?.touched){
+        <p style="color:red">Password không hợp lệ</p>
+    }
+  </div>
+
+  <button type="submit" [disabled]="addForm.invalid">Đăng Ký</button>
+</form>
+
