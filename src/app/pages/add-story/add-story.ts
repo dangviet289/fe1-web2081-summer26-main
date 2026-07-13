@@ -7,42 +7,51 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
   styleUrl: './add-story.css',
 })
 export class AddStory {
-  addForm: FormGroup;
+  addForm1: FormGroup;
+  addForm2: FormGroup;
   constructor(private fb: FormBuilder) {
-    this.addForm = this.fb.group({
-      title: ["", [Validators.required, Validators.minLength(3)]],
-      author: "",
-      views: ["", [Validators.min(0)]],
+    this.addForm1 = this.fb.group({
+      // title: ["", [Validators.required, Validators.minLength(3)]],
+      // author: "",
+      // views: ["", [Validators.min(0)]],
+
       name: ["", [Validators.required]],
       price: ["", [Validators.min(1)]],
       category:[""],
+    })
+
+    this.addForm2 = this.fb.group({
       username: ["", [Validators.required]],
       email: ["", [Validators.required]],
       password: ["", [Validators.required, Validators.minLength(6)]]
     })
   }
-  submitForm(){
-    console.log(this.addForm.value)
+
+  submitForm1(){
+    console.log(this.addForm1.value)
   }
-  get title(){
-    return this.addForm.get('title')
+  submitForm2(){
+    console.log(this.addForm2.value)
+  }
+ get title(){
+    return this.addForm1.get('title')
   }
   get views(){
-    return this.addForm.get('views')
+    return this.addForm1.get('views')
   }
   get name(){
-    return this.addForm.get('name')
+    return this.addForm1.get('name')
   }
   get price(){
-    return this.addForm.get('price')
+    return this.addForm1.get('price')
   }
   get username(){
-    return this.addForm.get('username')
+    return this.addForm2.get('username')
   }
   get email(){
-    return this.addForm.get('email')
+    return this.addForm2.get('email')
   }
   get password(){
-    return this.addForm.get('password')
+    return this.addForm2.get('password')
   }
 }

@@ -28,7 +28,7 @@
 <!-- Bài 1 -->
 <h2>Form thêm Product</h2>
 
-<form [formGroup]="addForm" (ngSubmit)="submitForm()">
+<form [formGroup]="addForm1" (ngSubmit)="submitForm1()">
   <div>
     <label>Tên sản phẩm</label>
     <input type="text" formControlName="name" />
@@ -51,13 +51,13 @@
     
   </div>
 
-  <button type="submit" >Thêm Product</button>
+  <button type="submit" [disabled]="addForm1.invalid">Thêm Product</button>
 </form>
 
 <!-- Bài 2 -->
 <h2>Form đăng ký tài khoản</h2>
 
-<form [formGroup]="addForm" (ngSubmit)="submitForm()">
+<form [formGroup]="addForm2" (ngSubmit)="submitForm2()">
   <div>
     <label>Tên Đăng Nhập</label>
     <input type="text" formControlName="username" />
@@ -82,6 +82,6 @@
     }
   </div>
 
-  <button type="submit" [disabled]="addForm.invalid">Đăng Ký</button>
+  <button type="submit" [disabled]="addForm2.invalid">Đăng Ký</button>
 </form>
 
