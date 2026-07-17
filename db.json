@@ -1,3 +1,28 @@
 {
-  "stories": []
+  "stories": [
+    {
+    "id": 1,
+    "title": "One Piece",
+    "author": "Oda",
+    "views": 10000
+  },
+  {
+    "id": 2,
+    "title": "Naruto",
+    "author": "Kishimoto",
+    "views": 90000
+  },
+  {
+    "id": 3,
+    "title": "Doraemon",
+    "author": "Fujiko F Fujio",
+    "views": 150000
+  },
+  {
+    "id": 4,
+    "title": "Dragon Ball",
+    "author": "Fujiko F Fujio",
+    "views": 70000
+  }
+  ]
 }
