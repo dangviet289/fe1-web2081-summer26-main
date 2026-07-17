@@ -1,28 +1,82 @@
 {
   "stories": [
     {
-    "id": 1,
-    "title": "One Piece",
-    "author": "Oda",
-    "views": 10000
-  },
-  {
-    "id": 2,
-    "title": "Naruto",
-    "author": "Kishimoto",
-    "views": 90000
-  },
-  {
-    "id": 3,
-    "title": "Doraemon",
-    "author": "Fujiko F Fujio",
-    "views": 150000
-  },
-  {
-    "id": 4,
-    "title": "Dragon Ball",
-    "author": "Fujiko F Fujio",
-    "views": 70000
-  }
+      "id": 1,
+      "title": "One Piece",
+      "author": "Oda",
+      "views": 10000
+    },
+    {
+      "id": 2,
+      "title": "Naruto",
+      "author": "Kishimoto",
+      "views": 90000
+    },
+    {
+      "id": 3,
+      "title": "Doraemon",
+      "author": "Fujiko F Fujio",
+      "views": 150000
+    },
+    {
+      "title": "fewfe",
+      "author": "ewf",
+      "views": 2,
+      "id": 4
+    },
+    {
+      "name": "cc",
+      "price": 2,
+      "category": "dsds",
+      "id": 5
+    },
+    {
+      "title": "êfregre",
+      "author": "evere",
+      "views": 2,
+      "id": 6
+    },
+    {
+      "title": "vfdvdf",
+      "author": "dfvfd",
+      "views": 33,
+      "id": 7
+    },
+    {
+      "title": "vêreer",
+      "author": "fvfdv",
+      "views": 3,
+      "id": 8
+    },
+    {
+      "name": "dfvdvd",
+      "price": 33,
+      "category": "fvfd",
+      "id": 9
+    },
+    {
+      "name": "ffdvfd",
+      "price": 2,
+      "category": "c vdfv",
+      "id": 10
+    },
+    {
+      "title": "dsvs",
+      "author": "dsvsd",
+      "views": 3,
+      "id": 11
+    },
+    {
+      "name": "bfd",
+      "price": 3,
+      "category": "fdbdf",
+      "id": 12
+    },
+    {
+      "name": "vdvd",
+      "price": 23,
+      "category": "ffd",
+      "id": 13
+    }
   ]
 }

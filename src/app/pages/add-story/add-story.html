@@ -1,4 +1,4 @@
-<!-- <h2>Thêm truyện tranh</h2>
+<h2>Thêm truyện tranh</h2>
 
 <form [formGroup]="addForm" (ngSubmit)="submitForm()">
   <div>
@@ -22,9 +22,21 @@
     }
   </div>
 
-  <button type="submit" [disabled]="addForm.invalid">Thêm truyện</button>
-</form> -->
-
+  <button class="btn btn-danger" 
+          [disabled]="loading"
+          (click)="submitForm"
+          [disabled]="addForm.invalid">
+          @if (loading) {
+  <span>Đang thêm...</span>
+} @else {
+  <span>Thêm Truyện</span>
+}</button>
+</form>
+@if (success) {
+<p style="color: green">{{ success }}</p>
+} @if (error) {
+<p style="color: red">{{ error }}</p>
+}
 <!-- Bài 1 -->
 <h2>Form thêm Product</h2>
 
@@ -51,8 +63,21 @@
     
   </div>
 
-  <button type="submit" [disabled]="addForm1.invalid">Thêm Product</button>
+  <button class="btn btn-danger" 
+          [disabled]="loading"
+          (click)="submitForm1"
+          [disabled]="addForm1.invalid">
+          @if (loading) {
+  <span>Đang thêm...</span>
+} @else {
+  <span>Thêm Sản Phẩm</span>
+}</button>
 </form>
+@if(success){
+  <p style="color: green;">{{ success }}</p>
+} @if(error){
+  <p style="color: red;">{{ error }}</p>
+}
 
 <!-- Bài 2 -->
 <h2>Form đăng ký tài khoản</h2>
