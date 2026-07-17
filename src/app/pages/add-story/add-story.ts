@@ -12,7 +12,8 @@ export class AddStory {
   loading: boolean = false;
 
   addForm: FormGroup;
-  success = "";
+  success1 = "";
+  success2 = "";
   error = "";
   addForm1: FormGroup;
   addForm2: FormGroup;
@@ -37,13 +38,13 @@ export class AddStory {
 
   submitForm(){
     this.error = "";
-    this.success = "";
+    this.success1 = "";
     this.loading = true;
     const data = this.addForm.value;
 
     this.http.post("http://localhost:3000/stories",data).subscribe({
       next: () =>{
-        this.success = "Thêm truyện thành công";
+        this.success1 = "Thêm truyện thành công";
         this.addForm.reset()
       },
       error: () => {
@@ -56,12 +57,12 @@ export class AddStory {
   }
   submitForm1(){
     this.error = ""
-    this.success = ""
+    this.success2 = ""
     this.loading = true;
     const data = this.addForm1.value
     this.http.post("http://localhost:3000/stories",data).subscribe({
       next: ()=>{
-        this.success = "Thêm thành công"
+        this.success2 = "Thêm thành công"
         this.addForm1.reset()
       },
       error: ()=>{
