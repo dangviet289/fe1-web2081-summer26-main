@@ -1,0 +1,38 @@
+<h2>Sửa truyện tranh</h2>
+
+<form [formGroup]="editForm" (ngSubmit)="submitForm()">
+
+    <div *ngIf="successMessage" class="alert alert-success" style="color: green;">
+    {{ successMessage }}
+  </div>
+
+  <div>
+    <label>Tên truyện</label>
+    <input type="text" formControlName="title" />
+    @if (title?.invalid && title?.touched){
+        <p style="color:red">Tên truyện phải ít nhất 3 kí tự</p>
+    }
+  </div>
+
+  <div>
+    <label>Tác giả</label>
+    <input type="text" formControlName="author" />
+  </div>
+
+  <div>
+    <label>Lượt xem</label>
+    <input type="number" formControlName="views" />
+    @if (views?.invalid && views?.touched){
+        <p style="color:red">Lượt xem phải là một số không âm</p>
+    }
+  </div>
+
+  <button class="btn btn-danger" 
+          
+          (click)="submitForm"
+          [disabled]="editForm.invalid">
+          <span>Thêm Truyện</span>
+          </button>
+
+</form>
+

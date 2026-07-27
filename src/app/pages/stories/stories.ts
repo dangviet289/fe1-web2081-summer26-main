@@ -1,6 +1,7 @@
 import { Component, OnInit   } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 interface Story {
   id: number ;
@@ -22,11 +23,16 @@ export class Stories {
   loading: boolean = false;
   stories: Story[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit() {
     this.getStories();
   }
+
+  goToEdit(id: any) {
+  // Điều hướng kèm theo id truyền vào mảng
+  this.router.navigate(['/edit-story', id]);
+}
 
   getStories() {
     this.http.get("http://localhost:3000/stories").subscribe({
