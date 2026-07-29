@@ -1,0 +1,64 @@
+<div class="max-w-md mx-auto p-6">
+  <h1 class="text-2xl font-bold mb-6">Đăng ký</h1>
+
+  <form [formGroup]="registerForm" (ngSubmit)="submitForm()" class="space-y-4">
+    <div>
+      <label>Tên</label>
+
+      <input class="w-full border rounded p-2" formControlName="name" />
+
+      @if(registerForm.get('name')?.touched && registerForm.get('name')?.invalid){
+
+      <p class="text-red-500 text-sm">Vui lòng nhập tên</p>
+
+      }
+    </div>
+
+    <div>
+      <label>Email</label>
+
+      <input class="w-full border rounded p-2" type="email" formControlName="email" />
+
+      @if(registerForm.get('email')?.touched && registerForm.get('email')?.invalid){
+
+      <p class="text-red-500 text-sm">Email không hợp lệ</p>
+
+      }
+    </div>
+
+    <div>
+      <label>Mật khẩu</label>
+
+      <input class="w-full border rounded p-2" type="password" formControlName="password" />
+
+      @if(registerForm.get('password')?.touched && registerForm.get('password')?.invalid){
+
+      <p class="text-red-500 text-sm">Mật khẩu tối thiểu 6 ký tự</p>
+
+      }
+    </div>
+
+    <div>
+      <label>Xác nhận mật khẩu</label>
+      <input class="w-full border rounded p-2" type="password" formControlName="confirmPassword" />
+      
+      @if(registerForm.get('confirmPassword')?.touched) {
+        @if(registerForm.get('confirmPassword')?.hasError('required')) {
+          <p class="text-red-500 text-sm">Vui lòng xác nhận mật khẩu</p>
+        }
+        @else if(registerForm.get('confirmPassword')?.hasError('passwordMismatch') || registerForm.hasError('passwordMismatch')) {
+          <p class="text-red-500 text-sm">Mật khẩu không khớp</p>
+        }
+      }
+    </div>
+    @if(error){
+    <div class="text-red-500">{{ error }}</div>
+    }
+
+    <button class="w-full bg-blue-600 text-white py-2 rounded disabled:bg-gray-400" [disabled]="loading">{{ loading ? "Đang đăng ký..." : "Đăng ký" }}</button>
+    <div class="text-center mt-4 text-sm">
+      <span class="text-gray-600">Đã có tài khoản? </span>
+      <button type="button" (click)="router.navigateByUrl('/login')" class="text-blue-600 font-semibold hover:underline">Đăng nhập</button>
+    </div>
+  </form>
+</div>
