@@ -19,6 +19,12 @@
       "password": "$2a$10$5dexxukFN/gvF2BlABt3xuEDUpgMLA3m6/nLyDzjlldjny.0Lh/7C",
       "name": "viet",
       "id": 2
+    },
+    {
+      "email": "1@gmail.com",
+      "password": "$2a$10$.A0i2oHo8Vf2GvICny3g9ez6X62w.4a9LbbA0Rsy0VtGPTO5RMknS",
+      "name": "rgergre",
+      "id": 3
     }
   ]
 }

@@ -9,6 +9,9 @@ import { EditStory } from './pages/edit-story/edit-story';
 import { Register } from './pages/register/register';
 import { Login } from './pages/login/login';
 
+import { authGuard, guestGuard } from './guards/auth.guard';
+
+
 export const routes: Routes = [
   { path: '', component: Home },         
   { path: 'about', component: About },   
@@ -19,4 +22,7 @@ export const routes: Routes = [
   { path: 'edit-story/:id', component: EditStory},
   { path: 'register', component: Register},
   { path: 'login', component: Login},
+  { path: '', component: Home, canActivate: [authGuard] },
+  { path: 'login', component: Login, canActivate: [guestGuard] },
+  { path: '**', redirectTo: '' }
 ];
